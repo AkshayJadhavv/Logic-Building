@@ -1,0 +1,31 @@
+// Input : 
+// Output : 
+
+#include<stdio.h>
+
+void strlwX(char *str)
+{
+    while(*str != '\0')
+    {
+        if((*str >= 'A') && (*str <= 'Z'))
+        {
+            *str = *str + ('a' - 'A');
+        }
+        str++;
+    }
+    
+}
+
+int main()
+{
+    char Arr[50] = {'\0'};
+
+    printf("Enter String : \n");
+    scanf("%[^'\n']s",Arr);
+
+    strlwX(Arr);
+
+    printf("Update string is : %s\n",Arr);
+
+    return 0;
+}
